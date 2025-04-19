@@ -1,0 +1,253 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body with background image */
+body {
+    background: url('img.avif') no-repeat center center fixed, #0a0a0a;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+    transition: 0.3s;
+}
+
+nav .logo:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* Home Section */
+#home {
+    background: url('images/bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#home h1 {
+    font-size: 48px;
+    font-weight: bold;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+#home h1 span {
+    color: #00ffcc;
+}
+
+#home p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #bbb;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background: #00ffcc;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #33ffd7;
+    transform: scale(1.1);
+}
+
+/* Section General Style */
+section {
+    padding: 80px 20px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+    font-weight: 600;
+}
+
+/* About Box Style */
+.about-box {
+    max-width: 720px;
+    margin: 30px auto 0;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Cards */
+.card,
+.education-card,
+.experience-card,
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 15px auto;
+    width: 50%;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.education-card:hover,
+.experience-card:hover,
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 255, 204, 0.4);
+}
+
+/* Skills Section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list span {
+    background: #00ffcc;
+    color: black;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-list span:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #00ffcc;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background: #121212;
+}
+
+#contact h2 {
+    font-size: 32px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 26px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00ffcc;
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background: #0d0d0d;
+    padding: 10px;
+    color: #bbb;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .card,
+    .education-card,
+    .experience-card,
+    .project {
+        width: 80%;
+    }
+
+    .about-box {
+        width: 90%;
+        padding: 20px;
+    }
+}
